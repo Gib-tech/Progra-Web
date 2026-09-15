@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Crear cuenta | Reading Storm</title>
+
+    <link
+        rel="stylesheet"
+        href="css/acceso.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="access-page">
+
+
+        <!-- =================================================
+             LADO VISUAL
+        ================================================== -->
+
+        <section class="access-hero">
+
+            <div class="hero-content">
+
+                <a
+                    href="index.html"
+                    class="brand"
+                >
+
+                    <span class="brand-icon">
+                        ▣
+                    </span>
+
+                    <span class="brand-name">
+                        READING<span>STORM</span>
+                    </span>
+
+                </a>
+
+
+                <div class="hero-message">
+
+                    <p class="section-label">
+                        COMIENZA TU BIBLIOTECA
+                    </p>
+
+                    <h1>
+                        Cada colección<br>
+                        comienza con<br>
+                        <span>una historia.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Crea tu cuenta y construye una
+                        biblioteca digital organizada a
+                        tu manera.
+                    </p>
+
+                </div>
+
+
+                <div class="hero-decoration">
+
+                    <div class="book book-one">
+                        <span>RS</span>
+                    </div>
+
+                    <div class="book book-two">
+                        <span>01</span>
+                    </div>
+
+                    <div class="book book-three">
+                        <span>02</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REGISTRO
+        ================================================== -->
+
+        <section class="access-form-section">
+
+            <div class="access-form-container register-container">
+
+
+                <div class="mobile-brand">
+
+                    <span class="brand-icon">
+                        ▣
+                    </span>
+
+                    <span class="brand-name">
+                        READING<span>STORM</span>
+                    </span>
+
+                </div>
+
+
+                <div class="form-heading">
+
+                    <p class="section-label">
+                        NUEVA CUENTA
+                    </p>
+
+                    <h2>
+                        Crear cuenta
+                    </h2>
+
+                    <p>
+                        Comienza a organizar tu biblioteca.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="form-registrar"
+                    novalidate
+                >
+
+
+                    <!-- NOMBRE -->
+
+                    <div class="form-group">
+
+                        <label for="input-nombre">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="input-nombre"
+                            placeholder="Tu nombre"
+                            autocomplete="name"
+                        >
+
+                        <small
+                            class="error-message"
+                            id="error-nombre"
+                        >
+                        </small>
+
+                    </div>
+
+
+                    <!-- CORREO -->
+
+                    <div class="form-group">
+
+                        <label for="input-correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="input-correo"
+                            placeholder="correo@ejemplo.com"
+                            autocomplete="email"
+                        >
+
+                        <small
+                            class="error-message"
+                            id="error-correo"
+                        >
+                        </small>
+
+                    </div>
+
+
+                    <!-- CONTRASEÑA -->
+
+                    <div class="form-group">
+
+                        <label for="input-contrasena">
+                            Contraseña
+                        </label>
+
+
+                        <div class="password-container">
+
+                            <input
+                                type="password"
+                                id="input-contrasena"
+                                placeholder="Crea una contraseña"
+                                autocomplete="new-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password-button"
+                                id="btn-mostrar-contrasena"
+                                aria-label="Mostrar contraseña"
+                            >
+                                ◉
+                            </button>
+
+                        </div>
+
+
+                        <small class="input-help">
+                            Mínimo 6 caracteres.
+                        </small>
+
+                        <small
+                            class="error-message"
+                            id="error-contrasena"
+                        >
+                        </small>
+
+                    </div>
+
+
+                    <!-- CONFIRMAR -->
+
+                    <div class="form-group">
+
+                        <label for="input-confirmar">
+                            Confirmar contraseña
+                        </label>
+
+
+                        <div class="password-container">
+
+                            <input
+                                type="password"
+                                id="input-confirmar"
+                                placeholder="Repite tu contraseña"
+                                autocomplete="new-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password-button"
+                                id="btn-mostrar-confirmar"
+                                aria-label="Mostrar contraseña"
+                            >
+                                ◉
+                            </button>
+
+                        </div>
+
+
+                        <small
+                            class="error-message"
+                            id="error-confirmar"
+                        >
+                        </small>
+
+                    </div>
+
+
+                    <!-- TÉRMINOS -->
+
+                    <label class="remember-option terms-option">
+
+                        <input
+                            type="checkbox"
+                            id="input-terminos"
+                        >
+
+                        <span class="custom-checkbox">
+                            ✓
+                        </span>
+
+                        <span>
+                            Acepto los términos y condiciones
+                            de Reading Storm.
+                        </span>
+
+                    </label>
+
+
+                    <!-- BOTÓN -->
+
+                    <button
+                        type="submit"
+                        class="primary-button access-button"
+                    >
+                        Crear cuenta
+                    </button>
+
+
+                </form>
+
+
+                <!-- LOGIN -->
+
+                <div class="access-footer">
+
+                    <span>
+                        ¿Ya tienes una cuenta?
+                    </span>
+
+                    <a href="iniciar.html">
+                        Iniciar sesión
+                    </a>
+
+                </div>
+
+
+                <a
+                    href="index.html"
+                    class="back-library"
+                >
+                    ← Volver a la biblioteca
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         SWEET ALERT
+    ====================================================== -->
+
+    <div
+        class="sweet-overlay"
+        id="sweet-overlay"
+    >
+
+        <div
+            class="sweet-alert"
+            id="sweet-alert"
+        >
+
+            <div class="sweet-icon">
+                ✓
+            </div>
+
+            <h3>
+                ¡Cuenta creada!
+            </h3>
+
+            <p>
+                Tu cuenta de Reading Storm está lista.
+            </p>
+
+            <button
+                type="button"
+                class="primary-button"
+                id="sweet-button"
+            >
+                Ir a mi biblioteca
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/registrar.js"></script>
+
+</body>
+
+</html>

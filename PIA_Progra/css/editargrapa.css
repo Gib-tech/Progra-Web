@@ -1,0 +1,142 @@
+/* =========================================
+   READING STORM
+   EDITAR GRAPA
+========================================= */
+
+
+/*
+    Reutilizamos el diseño del creador.
+*/
+
+@import url("creargrapa.css");
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.editar-container {
+    width: min(1450px, calc(100% - 70px));
+
+    margin: 0 auto;
+
+    padding: 42px 0 60px;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.editar-header {
+    margin-bottom: 28px;
+}
+
+
+.editar-header h1 {
+    margin-top: 14px;
+
+    font-size: clamp(27px, 3vw, 38px);
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.editar-header p {
+    margin-top: 8px;
+
+    color: #89919e;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   GUARDAR
+========================================= */
+
+.btn-guardar {
+    flex: 1.4;
+
+    border: 1px solid #b02121;
+
+    background-color: #c62828;
+
+    color: #ffffff;
+}
+
+
+.btn-guardar:hover {
+    background-color: #df3030;
+
+    border-color: #df3030;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ESTADO DE LECTURA
+========================================= */
+
+.estado-info {
+    margin: 0 20px 20px;
+
+    padding: 14px;
+
+    border: 1px solid #252e3a;
+
+    border-radius: 7px;
+
+    background-color: #0c1118;
+}
+
+
+.estado-info span {
+    display: block;
+
+    color: #626c79;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+.estado-info strong {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #d9a441;
+
+    font-size: 13px;
+}
+
+
+.estado-info p {
+    margin-top: 4px;
+
+    color: #697482;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .editar-container {
+        width: min(100% - 30px, 650px);
+
+        padding-top: 28px;
+    }
+
+}

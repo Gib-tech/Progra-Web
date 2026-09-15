@@ -1,0 +1,1130 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100dvh;
+
+    background-color: #080b12;
+
+    color: #f1f3f5;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 64px;
+
+    background-color: #0d111a;
+
+    border-bottom: 1px solid #202631;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 38px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 50;
+}
+
+
+/* LOGO */
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 19px;
+    letter-spacing: 1.5px;
+}
+
+.navbar-logo span {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.navbar-logo strong {
+    color: #d9a441;
+    font-weight: 800;
+}
+
+
+/* LINKS */
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-links a {
+    color: #9ca3af;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        color 0.2s ease;
+}
+
+.navbar-links a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.crear-container {
+    width: min(1450px, calc(100% - 70px));
+
+    margin: 0 auto;
+
+    padding: 42px 0 60px;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.crear-header {
+    margin-bottom: 28px;
+}
+
+.crear-header h1 {
+    margin-top: 14px;
+
+    font-size: clamp(27px, 3vw, 38px);
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.crear-header p {
+    margin-top: 8px;
+
+    color: #89919e;
+
+    font-size: 14px;
+}
+
+
+/* REGRESAR */
+
+.btn-regresar {
+    border: none;
+
+    background: transparent;
+
+    color: #9ca3af;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    padding: 0;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-regresar:hover {
+    color: #ffffff;
+
+    transform: translateX(-3px);
+}
+
+
+/* =========================================
+   GRID PRINCIPAL
+========================================= */
+
+.editor-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        390px;
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   PANELES
+========================================= */
+
+.panel {
+    background-color: #10151e;
+
+    border: 1px solid #222a36;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER DE PANEL
+========================================= */
+
+.panel-header {
+    min-height: 70px;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #222a36;
+}
+
+.panel-header.simple {
+    justify-content: flex-start;
+}
+
+.panel-header h2 {
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.panel-header span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #737d8b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   BOTONES SECUNDARIOS
+========================================= */
+
+.btn-secundario {
+    border: 1px solid #2a323e;
+
+    background-color: #151b25;
+
+    color: #dce0e5;
+
+    border-radius: 6px;
+
+    padding: 9px 13px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.btn-secundario:hover {
+    background-color: #1b222e;
+
+    border-color: #3b4554;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   DROP ZONE
+========================================= */
+
+.drop-zone {
+    margin: 22px;
+
+    min-height: 190px;
+
+    border: 1px dashed #394352;
+
+    border-radius: 8px;
+
+    background-color: #0c1118;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.drop-zone:hover {
+    border-color: #d9a441;
+
+    background-color: #0e141c;
+}
+
+.drop-zone.drag-over {
+    border-color: #c62828;
+
+    background-color: #151016;
+
+    transform: scale(1.01);
+}
+
+
+/* ICONO */
+
+.drop-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background-color: #171d27;
+
+    color: #d9a441;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 27px;
+
+    margin-bottom: 13px;
+}
+
+.drop-zone h3 {
+    font-size: 15px;
+
+    color: #e9ebee;
+
+    font-weight: 600;
+}
+
+.drop-zone p {
+    margin-top: 7px;
+
+    color: #737d8b;
+
+    font-size: 12px;
+}
+
+.drop-zone span {
+    margin-top: 12px;
+
+    color: #4f5967;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   GRID DE PÁGINAS
+========================================= */
+
+.paginas-grid {
+    padding: 0 22px 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(150px, 1fr));
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   TARJETA DE PÁGINA
+========================================= */
+
+.pagina-card {
+    position: relative;
+
+    background-color: #0c1118;
+
+    border: 1px solid #252e3a;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    cursor: grab;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.pagina-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #3c4655;
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+.pagina-card.dragging {
+    opacity: 0.35;
+
+    transform: scale(0.96);
+}
+
+.pagina-card.portada {
+    border-color: #d9a441;
+
+    box-shadow:
+        0 0 0 1px rgba(217, 164, 65, 0.15);
+}
+
+
+/* IMAGEN */
+
+.pagina-imagen {
+    width: 100%;
+
+    aspect-ratio: 0.7;
+
+    object-fit: cover;
+
+    display: block;
+
+    background-color: #151a22;
+}
+
+
+/* NUMERO */
+
+.pagina-numero {
+    position: absolute;
+
+    top: 8px;
+    left: 8px;
+
+    min-width: 25px;
+    height: 25px;
+
+    padding: 0 7px;
+
+    border-radius: 5px;
+
+    background-color: rgba(8, 11, 18, 0.9);
+
+    color: #ffffff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* PORTADA */
+
+.pagina-portada {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    background-color: #d9a441;
+
+    color: #111111;
+
+    border-radius: 5px;
+
+    padding: 5px 7px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* CONTROLES */
+
+.pagina-controles {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 4px;
+
+    padding: 8px;
+
+    background-color: #10151e;
+
+    border-top: 1px solid #222a36;
+}
+
+.pagina-controles button {
+    flex: 1;
+
+    height: 28px;
+
+    border: 1px solid #252e3a;
+
+    background-color: #151b24;
+
+    color: #89919e;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.pagina-controles button:hover {
+    background-color: #1d2530;
+
+    color: #ffffff;
+
+    border-color: #3a4553;
+}
+
+.pagina-controles button.eliminar:hover {
+    background-color: #32151a;
+
+    border-color: #7b252d;
+
+    color: #ff7079;
+}
+
+
+/* =========================================
+   SIN PÁGINAS
+========================================= */
+
+.sin-paginas {
+    grid-column: 1 / -1;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    color: #555f6d;
+}
+
+.sin-paginas-icon {
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+    color: #343d4a;
+}
+
+.sin-paginas p {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FORMULARIOS
+========================================= */
+
+.informacion-panel {
+    overflow: visible;
+}
+
+.form-group {
+    padding: 0 20px;
+
+    margin-top: 20px;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #cfd4db;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    height: 40px;
+
+    border: 1px solid #2a323e;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    background-color: #0c1118;
+
+    color: #e7e9ec;
+
+    padding: 0 12px;
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #4e5866;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #d9a441;
+
+    box-shadow:
+        0 0 0 2px rgba(217, 164, 65, 0.08);
+}
+
+.form-group input:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #596371;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   NUEVA COLECCIÓN
+========================================= */
+
+.new-collection-box {
+    display: none;
+
+    margin: 18px 20px 0;
+
+    padding: 16px;
+
+    background-color: #0c1118;
+
+    border: 1px solid #2a323e;
+
+    border-radius: 7px;
+
+    animation: aparecer 0.25s ease;
+}
+
+.new-collection-box.visible {
+    display: block;
+}
+
+.new-collection-header {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 4px;
+}
+
+.new-collection-header strong {
+    display: block;
+
+    color: #d9a441;
+
+    font-size: 12px;
+}
+
+.new-collection-header span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #5e6876;
+
+    font-size: 10px;
+}
+
+.new-collection-box .form-group {
+    padding: 0;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   INFORMACIÓN DE PORTADA
+========================================= */
+
+.portada-info {
+    margin: 20px;
+
+    padding: 13px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    background-color: #141a23;
+
+    border: 1px solid #252e3a;
+
+    border-radius: 7px;
+}
+
+.portada-info-icon {
+    flex-shrink: 0;
+
+    width: 27px;
+    height: 27px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: rgba(217, 164, 65, 0.12);
+
+    color: #d9a441;
+
+    font-size: 12px;
+}
+
+.portada-info strong {
+    display: block;
+
+    color: #d9dde2;
+
+    font-size: 11px;
+}
+
+.portada-info p {
+    margin-top: 4px;
+
+    color: #626c79;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   ACCIONES
+========================================= */
+
+.acciones-panel {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 14px;
+}
+
+.acciones-panel button {
+    height: 42px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-cancelar {
+    flex: 1;
+
+    border: 1px solid #2a323e;
+
+    background-color: #10151e;
+
+    color: #8c95a1;
+}
+
+.btn-cancelar:hover {
+    background-color: #171d27;
+
+    color: #ffffff;
+}
+
+.btn-crear {
+    flex: 1.4;
+
+    border: 1px solid #b02121;
+
+    background-color: #c62828;
+
+    color: #ffffff;
+}
+
+.btn-crear:hover {
+    background-color: #df3030;
+
+    border-color: #df3030;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ALERTA PERSONALIZADA
+========================================= */
+
+.alert-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    background-color: rgba(0, 0, 0, 0.72);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.alert-overlay.visible {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.alert-box {
+    width: min(390px, calc(100% - 40px));
+
+    padding: 30px 28px 26px;
+
+    background-color: #10151e;
+
+    border: 1px solid #2a323e;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    transform: scale(0.85);
+
+    opacity: 0;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.alert-overlay.visible .alert-box {
+    transform: scale(1);
+
+    opacity: 1;
+}
+
+
+/* ICONO ALERTA */
+
+.alert-icon {
+    width: 68px;
+    height: 68px;
+
+    margin: 0 auto 17px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    animation: alertIcon 0.4s ease;
+}
+
+.alert-icon.success {
+    background-color: rgba(35, 168, 92, 0.12);
+
+    border: 2px solid #23a85c;
+
+    color: #23c86c;
+}
+
+.alert-icon.error {
+    background-color: rgba(198, 40, 40, 0.12);
+
+    border: 2px solid #c62828;
+
+    color: #ef5350;
+}
+
+.alert-box h3 {
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+.alert-box p {
+    margin-top: 8px;
+
+    color: #7d8794;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.alert-box button {
+    width: 100%;
+
+    height: 39px;
+
+    margin-top: 20px;
+
+    border: 1px solid #2a323e;
+
+    border-radius: 6px;
+
+    background-color: #171d27;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition:
+        background-color 0.2s ease;
+}
+
+.alert-box button:hover {
+    background-color: #202833;
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes alertIcon {
+
+    0% {
+        transform: scale(0.5);
+    }
+
+    70% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .editor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-right {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar-links {
+        gap: 14px;
+    }
+
+    .navbar-links a {
+        font-size: 12px;
+    }
+
+    .crear-container {
+        width: min(100% - 30px, 650px);
+
+        padding-top: 28px;
+    }
+
+    .panel-header {
+        align-items: flex-start;
+
+        gap: 12px;
+
+        flex-direction: column;
+    }
+
+    .panel-header .btn-secundario {
+        width: 100%;
+    }
+
+    .paginas-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .navbar-logo {
+        font-size: 15px;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .paginas-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 9px;
+
+        padding: 0 12px 12px;
+    }
+
+    .drop-zone {
+        margin: 12px;
+
+        min-height: 160px;
+    }
+
+    .acciones-panel {
+        flex-direction: column;
+    }
+
+}

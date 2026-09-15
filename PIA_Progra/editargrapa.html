@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Editar grapa | READING STORM</title>
+
+    <link
+        rel="stylesheet"
+        href="css/editargrapa.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- =================================
+         NAVEGACIÓN
+    ================================== -->
+
+    <nav class="navbar">
+
+        <div class="navbar-logo">
+
+            <span>READING</span>
+            <strong>STORM</strong>
+
+        </div>
+
+
+        <div class="navbar-links">
+
+            <a href="index.html">
+                Biblioteca
+            </a>
+
+            <a href="index.html#colecciones">
+                Colecciones
+            </a>
+
+            <a href="#">
+                Mi cuenta
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =================================
+         CONTENIDO
+    ================================== -->
+
+    <main class="editar-container">
+
+
+        <!-- ENCABEZADO -->
+
+        <header class="editar-header">
+
+            <div>
+
+                <button
+                    type="button"
+                    class="btn-regresar"
+                    id="btn-regresar"
+                >
+                    ← Biblioteca
+                </button>
+
+                <h1>
+                    Editar grapa
+                </h1>
+
+                <p>
+                    Modifica la información, portada y páginas de tu grapa.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================
+             EDITOR
+        ================================== -->
+
+        <section class="editor-grid">
+
+
+            <!-- =================================
+                 IZQUIERDA
+            ================================== -->
+
+            <div class="editor-left">
+
+                <section class="panel paginas-panel">
+
+
+                    <!-- HEADER -->
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Páginas
+                            </h2>
+
+                            <span id="contador-paginas">
+                                0 páginas
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn-secundario"
+                            id="btn-agregar-imagenes"
+                        >
+                            + Agregar imágenes
+                        </button>
+
+                    </div>
+
+
+                    <!-- INPUT -->
+
+                    <input
+                        type="file"
+                        id="input-imagenes"
+                        accept=".jpg,.jpeg"
+                        multiple
+                        hidden
+                    >
+
+
+                    <!-- DROP -->
+
+                    <div
+                        class="drop-zone"
+                        id="drop-zone"
+                    >
+
+                        <div class="drop-icon">
+                            +
+                        </div>
+
+                        <h3>
+                            Agrega más páginas
+                        </h3>
+
+                        <p>
+                            Arrastra imágenes aquí o haz clic para seleccionarlas
+                        </p>
+
+                        <span>
+                            Formatos permitidos: JPG / JPEG
+                        </span>
+
+                    </div>
+
+
+                    <!-- PÁGINAS -->
+
+                    <div
+                        class="paginas-grid"
+                        id="paginas-grid"
+                    >
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================
+                 DERECHA
+            ================================== -->
+
+            <aside class="editor-right">
+
+
+                <!-- INFORMACIÓN -->
+
+                <section class="panel informacion-panel">
+
+                    <div class="panel-header simple">
+
+                        <div>
+
+                            <h2>
+                                Información
+                            </h2>
+
+                            <span>
+                                Datos actuales de la grapa
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NOMBRE -->
+
+                    <div class="form-group">
+
+                        <label for="nombre-grapa">
+                            Nombre de la grapa
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre-grapa"
+                            maxlength="120"
+                            placeholder="Ej. The Amazing Spider-Man"
+                        >
+
+                    </div>
+
+
+                    <!-- COLECCIÓN -->
+
+                    <div class="form-group">
+
+                        <label for="select-coleccion">
+                            Colección
+                        </label>
+
+                        <select id="select-coleccion">
+
+                            <option value="sin-coleccion">
+                                Sin colección
+                            </option>
+
+                            <option value="nueva-coleccion">
+                                + Nueva colección
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- NUEVA COLECCIÓN -->
+
+                    <div
+                        class="new-collection-box"
+                        id="new-collection-box"
+                    >
+
+                        <div class="new-collection-header">
+
+                            <div>
+
+                                <strong>
+                                    Nueva colección
+                                </strong>
+
+                                <span>
+                                    La grapa será movida a esta nueva colección.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="nombre-coleccion">
+                                Nombre de la colección
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre-coleccion"
+                                maxlength="120"
+                                placeholder="Ej. Spider-Man"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="input-portada">
+                                Portada de la colección
+                            </label>
+
+                            <input
+                                type="file"
+                                id="input-portada"
+                                accept=".jpg,.jpeg"
+                            >
+
+                            <small>
+                                JPG o JPEG.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NÚMERO -->
+
+                    <div class="form-group">
+
+                        <label for="numero-grapa">
+                            Número de grapa
+                        </label>
+
+                        <input
+                            type="number"
+                            id="numero-grapa"
+                            min="1"
+                            placeholder="Ej. 734"
+                        >
+
+                        <small>
+                            Solo se utiliza cuando pertenece a una colección.
+                        </small>
+
+                    </div>
+
+
+                    <!-- PORTADA -->
+
+                    <div class="portada-info">
+
+                        <div class="portada-info-icon">
+                            ★
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Portada de la grapa
+                            </strong>
+
+                            <p>
+                                La página marcada con ★ será utilizada como portada.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROGRESO -->
+
+                    <div class="estado-info">
+
+                        <span>
+                            Estado de lectura
+                        </span>
+
+                        <strong id="estado-lectura">
+                            Sin leer
+                        </strong>
+
+                        <p id="progreso-lectura">
+                            Página 1
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ACCIONES -->
+
+                <section class="acciones-panel">
+
+                    <button
+                        type="button"
+                        class="btn-cancelar"
+                        id="btn-cancelar"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn-guardar"
+                        id="btn-guardar"
+                    >
+                        Guardar cambios
+                    </button>
+
+                </section>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         ALERTA
+    ================================== -->
+
+    <div
+        class="alert-overlay"
+        id="alert-overlay"
+    >
+
+        <div class="alert-box">
+
+            <div
+                class="alert-icon"
+                id="alert-icon"
+            >
+            </div>
+
+            <h3 id="alert-title">
+                Título
+            </h3>
+
+            <p id="alert-message">
+                Mensaje
+            </p>
+
+            <button
+                type="button"
+                id="alert-button"
+            >
+                Continuar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/editargrapa.js"></script>
+
+</body>
+
+</html>
