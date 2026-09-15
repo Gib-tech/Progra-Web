@@ -1,0 +1,1291 @@
+/* ==========================================================
+   READING STORM
+   USUARIO
+========================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: #080b12;
+
+    color: #eef1f5;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.main-header {
+    height: 70px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    padding:
+        0 clamp(25px, 5vw, 70px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color:
+        rgba(8, 11, 18, 0.94);
+
+    border-bottom:
+        1px solid #1d242e;
+
+    backdrop-filter: blur(15px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+.brand-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 7px;
+
+    background-color: #c62828;
+
+    font-size: 16px;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.brand-name span {
+    color: #d9a441;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.library-button {
+    color: #8993a2;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: color 0.2s ease;
+}
+
+.library-button:hover {
+    color: #ffffff;
+}
+
+.avatar-button {
+    width: 38px;
+    height: 38px;
+
+    border:
+        1px solid #343d49;
+
+    border-radius: 50%;
+
+    background-color: #161d27;
+
+    color: #d9a441;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================================
+   PÁGINA
+========================================================== */
+
+.account-page {
+    width: min(1180px, 100%);
+
+    margin: 0 auto;
+
+    padding:
+        65px
+        clamp(25px, 5vw, 60px)
+        100px;
+}
+
+.account-heading {
+    margin-bottom: 65px;
+}
+
+.account-heading h1 {
+    margin-bottom: 10px;
+
+    font-size:
+        clamp(36px, 5vw, 56px);
+
+    letter-spacing: -1.5px;
+}
+
+.heading-description,
+.section-description {
+    color: #778291;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.section-label {
+    margin-bottom: 10px;
+
+    color: #d9a441;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================================
+   SECCIONES
+========================================================== */
+
+.account-section {
+    margin-bottom: 65px;
+}
+
+.section-title {
+    margin-bottom: 22px;
+}
+
+.section-title h2 {
+    margin-bottom: 6px;
+
+    font-size: 22px;
+}
+
+
+/* ==========================================================
+   PERFIL
+========================================================== */
+
+.profile-card {
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    background-color: #10151e;
+
+    border:
+        1px solid #252d38;
+
+    border-radius: 11px;
+}
+
+.profile-avatar {
+    width: 95px;
+    height: 95px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #7d1f1f,
+            #351111
+        );
+
+    border:
+        2px solid #9b3030;
+
+    color: #ffffff;
+
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.profile-information {
+    flex: 1;
+}
+
+.profile-main {
+    margin-bottom: 23px;
+}
+
+.profile-main h3 {
+    margin-bottom: 5px;
+
+    font-size: 23px;
+}
+
+.profile-main p {
+    color: #7c8796;
+
+    font-size: 12px;
+}
+
+.profile-data {
+    display: flex;
+
+    gap: 50px;
+
+    margin-bottom: 24px;
+}
+
+.profile-data > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.data-label {
+    color: #66717f;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.profile-data strong {
+    font-size: 12px;
+}
+
+.profile-actions {
+    display: flex;
+
+    gap: 20px;
+}
+
+
+/* ==========================================================
+   BOTONES
+========================================================== */
+
+.primary-button,
+.secondary-button {
+    min-height: 40px;
+
+    padding:
+        0 18px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.primary-button {
+    border: none;
+
+    background-color: #c62828;
+
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background-color: #df3030;
+
+    transform: translateY(-1px);
+}
+
+.secondary-button {
+    border:
+        1px solid #343e4c;
+
+    background-color: #161d27;
+
+    color: #d9dde3;
+}
+
+.secondary-button:hover {
+    background-color: #202936;
+
+    border-color: #4a5667;
+}
+
+.danger-text-button {
+    border: none;
+
+    background: none;
+
+    color: #d85b5b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.danger-text-button:hover {
+    color: #ff7474;
+}
+
+
+/* ==========================================================
+   ALMACENAMIENTO
+========================================================== */
+
+.storage-card {
+    padding: 30px;
+
+    background-color: #10151e;
+
+    border:
+        1px solid #252d38;
+
+    border-radius: 11px;
+}
+
+.storage-top {
+    margin-bottom: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.storage-top > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.storage-label {
+    color: #737e8e;
+
+    font-size: 11px;
+}
+
+.storage-top strong {
+    font-size: 17px;
+}
+
+.storage-percentage {
+    color: #d9a441;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.storage-progress {
+    width: 100%;
+    height: 8px;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+
+    background-color: #242b35;
+}
+
+.storage-progress-bar {
+    width: 0%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #9c2525,
+            #d9a441
+        );
+
+    transition:
+        width 0.5s ease;
+}
+
+.storage-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top:
+        1px solid #202731;
+
+    padding-top: 25px;
+}
+
+.storage-stat {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.storage-stat-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 7px;
+
+    background-color: #181f29;
+
+    color: #d9a441;
+}
+
+.storage-stat div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.storage-stat strong {
+    font-size: 15px;
+}
+
+.storage-stat div span {
+    color: #6f7a89;
+
+    font-size: 10px;
+}
+
+
+/* ==========================================================
+   PLAN ACTUAL
+========================================================== */
+
+.current-plan-card {
+    padding: 27px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(108, 25, 25, 0.35),
+            #10151e 45%
+        );
+
+    border:
+        1px solid #42272b;
+
+    border-radius: 11px;
+}
+
+.current-plan-main {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.plan-symbol {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+
+    background-color: #6f1d1d;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.current-plan-label {
+    color: #d9a441;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.current-plan-main h3 {
+    margin:
+        5px 0;
+
+    font-size: 20px;
+}
+
+.current-plan-main p {
+    color: #737e8d;
+
+    font-size: 11px;
+}
+
+.current-plan-capacity {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 4px;
+}
+
+.current-plan-capacity span {
+    color: #737e8d;
+
+    font-size: 10px;
+}
+
+.current-plan-capacity strong {
+    color: #d9a441;
+
+    font-size: 17px;
+}
+
+
+/* ==========================================================
+   PLANES
+========================================================== */
+
+.plans-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.plan-card {
+    min-height: 410px;
+
+    position: relative;
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #10151e;
+
+    border:
+        1px solid #252d38;
+
+    border-radius: 11px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.plan-card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color: #424d5d;
+}
+
+.plan-card.featured {
+    border-color: #8b6628;
+
+    background:
+        linear-gradient(
+            160deg,
+            rgba(217, 164, 65, 0.08),
+            #10151e 35%
+        );
+}
+
+.recommended-badge {
+    position: absolute;
+
+    right: 20px;
+    top: -10px;
+
+    padding:
+        5px 9px;
+
+    border-radius: 4px;
+
+    background-color: #d9a441;
+
+    color: #17130b;
+
+    font-size: 8px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.plan-type {
+    margin-bottom: 9px;
+
+    color: #737e8d;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.plan-card h3 {
+    margin-bottom: 16px;
+
+    font-size: 22px;
+}
+
+.plan-price {
+    min-height: 47px;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 7px;
+}
+
+.plan-price strong {
+    font-size: 31px;
+}
+
+.plan-price span {
+    padding-bottom: 5px;
+
+    color: #697483;
+
+    font-size: 10px;
+}
+
+.plan-storage {
+    margin:
+        22px 0;
+
+    padding:
+        13px;
+
+    border-radius: 6px;
+
+    background-color: #181e27;
+
+    color: #d9a441;
+
+    text-align: center;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.plan-card ul {
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    list-style: none;
+
+    color: #8993a1;
+
+    font-size: 11px;
+}
+
+.plan-card li::first-letter {
+    color: #52b788;
+}
+
+.plan-button {
+    width: 100%;
+    height: 42px;
+
+    margin-top: auto;
+
+    border:
+        1px solid #394352;
+
+    border-radius: 7px;
+
+    background-color: #171e28;
+
+    color: #dce1e8;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.plan-button:hover {
+    background-color: #202936;
+}
+
+.plan-button.current {
+    opacity: 0.5;
+
+    cursor: default;
+}
+
+
+/* ==========================================================
+   PAGO
+========================================================== */
+
+.payment-empty,
+.saved-payment {
+    padding: 25px 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    background-color: #10151e;
+
+    border:
+        1px solid #252d38;
+
+    border-radius: 11px;
+}
+
+.payment-icon,
+.card-brand {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 7px;
+
+    background-color: #171f29;
+
+    color: #d9a441;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.payment-empty > div:nth-child(2) {
+    flex: 1;
+}
+
+.payment-empty h3 {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+}
+
+.payment-empty p {
+    color: #717c8b;
+
+    font-size: 11px;
+}
+
+.saved-payment {
+    display: none;
+}
+
+.saved-payment.show {
+    display: flex;
+}
+
+.payment-empty.hide {
+    display: none;
+}
+
+.payment-information {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-right: auto;
+}
+
+.payment-information span {
+    color: #687382;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.payment-information strong {
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   MODALES
+========================================================== */
+
+.modal-overlay,
+.sweet-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 500;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color:
+        rgba(0, 0, 0, 0.78);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.modal-overlay.show,
+.sweet-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    width: min(480px, 100%);
+
+    padding: 30px;
+
+    background-color: #10151e;
+
+    border:
+        1px solid #303946;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 25px 80px
+        rgba(0, 0, 0, 0.65);
+}
+
+.modal-header {
+    margin-bottom: 28px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.modal-header h2 {
+    font-size: 22px;
+}
+
+.close-button {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #181f29;
+
+    color: #8d97a5;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #242d39;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   FORMULARIOS
+========================================================== */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d9dde3;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+    height: 46px;
+
+    padding:
+        0 13px;
+
+    outline: none;
+
+    border:
+        1px solid #303947;
+
+    border-radius: 7px;
+
+    background-color: #0c1118;
+
+    color: #ffffff;
+
+    font-size: 12px;
+}
+
+.form-group input:focus {
+    border-color: #626f81;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 0.6fr;
+
+    gap: 15px;
+}
+
+.modal-actions {
+    margin-top: 28px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+.simulation-message {
+    margin-bottom: 25px;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid #473c24;
+
+    border-radius: 6px;
+
+    background-color:
+        rgba(217, 164, 65, 0.06);
+
+    color: #a89469;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   CONFIRMAR PLAN
+========================================================== */
+
+.plan-modal {
+    position: relative;
+
+    text-align: center;
+}
+
+.plan-close {
+    position: absolute;
+
+    right: 20px;
+    top: 20px;
+}
+
+.plan-confirm-icon {
+    width: 62px;
+    height: 62px;
+
+    margin:
+        5px auto 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    background-color: #681b1b;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.plan-modal h2 {
+    margin-bottom: 10px;
+
+    font-size: 25px;
+}
+
+.plan-confirm-description {
+    max-width: 330px;
+
+    margin:
+        0 auto 25px;
+
+    color: #7c8796;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.plan-summary {
+    margin-bottom: 25px;
+
+    padding:
+        17px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border:
+        1px solid #2a323e;
+
+    border-radius: 7px;
+
+    background-color: #0d1219;
+}
+
+.plan-summary span {
+    color: #7b8695;
+
+    font-size: 11px;
+}
+
+.plan-summary strong {
+    color: #d9a441;
+
+    font-size: 12px;
+}
+
+.confirm-plan-button {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   SWEET ALERT
+========================================================== */
+
+.sweet-alert {
+    width: min(390px, 100%);
+
+    padding: 35px;
+
+    background-color: #10151e;
+
+    border:
+        1px solid #303946;
+
+    border-radius: 11px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.65);
+}
+
+.sweet-icon {
+    width: 55px;
+    height: 55px;
+
+    margin:
+        0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border:
+        2px solid #52b788;
+
+    border-radius: 50%;
+
+    color: #52b788;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.sweet-alert.error
+.sweet-icon {
+    border-color: #e04b4b;
+
+    color: #e04b4b;
+}
+
+.sweet-alert h3 {
+    margin-bottom: 9px;
+
+    font-size: 20px;
+}
+
+.sweet-alert p {
+    margin-bottom: 24px;
+
+    color: #7c8796;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-card {
+        min-height: auto;
+    }
+
+    .storage-details {
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .profile-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .profile-data {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .storage-details {
+        grid-template-columns: 1fr;
+    }
+
+    .current-plan-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .current-plan-capacity {
+        align-items: flex-start;
+    }
+
+    .payment-empty,
+    .saved-payment {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .brand-name {
+        font-size: 14px;
+    }
+
+    .library-button {
+        display: none;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Iniciar sesión | Reading Storm</title>
+
+    <link
+        rel="stylesheet"
+        href="css/acceso.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="access-page">
+
+
+        <!-- =================================================
+             LADO VISUAL
+        ================================================== -->
+
+        <section class="access-hero">
+
+            <div class="hero-content">
+
+                <a
+                    href="index.html"
+                    class="brand"
+                >
+
+                    <span class="brand-icon">
+                        ▣
+                    </span>
+
+                    <span class="brand-name">
+                        READING<span>STORM</span>
+                    </span>
+
+                </a>
+
+
+                <div class="hero-message">
+
+                    <p class="section-label">
+                        TU BIBLIOTECA DIGITAL
+                    </p>
+
+                    <h1>
+                        Tus historias.<br>
+                        Tu colección.<br>
+                        <span>En un solo lugar.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Organiza tus cómics y mangas,
+                        crea colecciones y continúa
+                        leyendo justo donde lo dejaste.
+                    </p>
+
+                </div>
+
+
+                <div class="hero-decoration">
+
+                    <div class="book book-one">
+                        <span>RS</span>
+                    </div>
+
+                    <div class="book book-two">
+                        <span>01</span>
+                    </div>
+
+                    <div class="book book-three">
+                        <span>02</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INICIO DE SESIÓN
+        ================================================== -->
+
+        <section class="access-form-section">
+
+            <div class="access-form-container">
+
+                <div class="mobile-brand">
+
+                    <span class="brand-icon">
+                        ▣
+                    </span>
+
+                    <span class="brand-name">
+                        READING<span>STORM</span>
+                    </span>
+
+                </div>
+
+
+                <div class="form-heading">
+
+                    <p class="section-label">
+                        BIENVENIDO DE NUEVO
+                    </p>
+
+                    <h2>
+                        Iniciar sesión
+                    </h2>
+
+                    <p>
+                        Accede a tu biblioteca personal.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="form-iniciar"
+                    novalidate
+                >
+
+
+                    <!-- CORREO -->
+
+                    <div class="form-group">
+
+                        <label for="input-correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="input-correo"
+                            placeholder="correo@ejemplo.com"
+                            autocomplete="email"
+                        >
+
+                        <small
+                            class="error-message"
+                            id="error-correo"
+                        >
+                        </small>
+
+                    </div>
+
+
+                    <!-- CONTRASEÑA -->
+
+                    <div class="form-group">
+
+                        <div class="password-label">
+
+                            <label for="input-contrasena">
+                                Contraseña
+                            </label>
+
+                            <button
+                                type="button"
+                                class="forgot-button"
+                                id="btn-olvide"
+                            >
+                                ¿La olvidaste?
+                            </button>
+
+                        </div>
+
+
+                        <div class="password-container">
+
+                            <input
+                                type="password"
+                                id="input-contrasena"
+                                placeholder="Ingresa tu contraseña"
+                                autocomplete="current-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password-button"
+                                id="btn-mostrar-contrasena"
+                                aria-label="Mostrar contraseña"
+                            >
+                                ◉
+                            </button>
+
+                        </div>
+
+                        <small
+                            class="error-message"
+                            id="error-contrasena"
+                        >
+                        </small>
+
+                    </div>
+
+
+                    <!-- RECORDAR -->
+
+                    <label class="remember-option">
+
+                        <input
+                            type="checkbox"
+                            id="input-recordar"
+                        >
+
+                        <span class="custom-checkbox">
+                            ✓
+                        </span>
+
+                        <span>
+                            Mantener mi sesión iniciada
+                        </span>
+
+                    </label>
+
+
+                    <!-- BOTÓN -->
+
+                    <button
+                        type="submit"
+                        class="primary-button access-button"
+                    >
+                        Iniciar sesión
+                    </button>
+
+
+                </form>
+
+
+                <!-- REGISTRO -->
+
+                <div class="access-footer">
+
+                    <span>
+                        ¿Todavía no tienes una cuenta?
+                    </span>
+
+                    <a href="registrar.html">
+                        Crear cuenta
+                    </a>
+
+                </div>
+
+
+                <a
+                    href="index.html"
+                    class="back-library"
+                >
+                    ← Volver a la biblioteca
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         SWEET ALERT
+    ====================================================== -->
+
+    <div
+        class="sweet-overlay"
+        id="sweet-overlay"
+    >
+
+        <div
+            class="sweet-alert"
+            id="sweet-alert"
+        >
+
+            <div
+                class="sweet-icon"
+                id="sweet-icon"
+            >
+                ✓
+            </div>
+
+            <h3 id="sweet-title">
+                ¡Bienvenido!
+            </h3>
+
+            <p id="sweet-message">
+                Sesión iniciada correctamente.
+            </p>
+
+            <button
+                type="button"
+                class="primary-button"
+                id="sweet-button"
+            >
+                Continuar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/iniciar.js"></script>
+
+</body>
+
+</html>
